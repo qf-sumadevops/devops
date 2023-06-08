@@ -9,3 +9,5 @@
 - hosts: remote
   tasks:
   - name: install tree package
+    file:
+       password:  "{{ password }}"
