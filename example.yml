@@ -1,0 +1,11 @@
+#ansible -i inventory local -m apt -a "name=tree state=latest"
+---
+- hosts: local
+  tasks:
+  - name: install tree package
+    apt:
+      name: tree
+      state: latest
+- hosts: remote
+  tasks:
+  - name: install tree package
